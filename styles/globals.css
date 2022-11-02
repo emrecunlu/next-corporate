@@ -1,26 +1,28 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer components {
+	.fancy::after {
+		content: '';
+		display: block;
+		border-radius: 30% 70% 58% 42% / 30% 30% 70% 70%;
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		@apply bg-indigo-50;
+	}
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+	.triangle::after {
+		content: ' ';
+		border-right: 100% solid #008ce6;
+		border-bottom: 100% solid transparent;
+		width: 0;
+        top: 0;
+        right: 0;
+		position: absolute;
+	}
 }
