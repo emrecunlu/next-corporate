@@ -40,8 +40,8 @@ export default Blogs
 
 Blogs.getLayout = function PageLayout(page) {
 	return (
-		<MainLayout>
-			<BlogLayout title="Blog List">{page}</BlogLayout>
+		<MainLayout title="Blog List">
+			<BlogLayout>{page}</BlogLayout>
 		</MainLayout>
 	)
 }

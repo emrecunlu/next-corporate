@@ -5,7 +5,7 @@ import BlogLayout from '../../components/Layouts/BlogLayout'
 import Image from 'next/image'
 
 function BlogDetail() {
-const router = useRouter()
+	const router = useRouter()
 
 	const blog = {
 		image:
@@ -46,8 +46,8 @@ export default BlogDetail
 
 BlogDetail.getLayout = function PageLayout(page) {
 	return (
-		<MainLayout>
-			<BlogLayout title="Blog Detail">{page}</BlogLayout>
+		<MainLayout title="Blog Detail">
+			<BlogLayout>{page}</BlogLayout>
 		</MainLayout>
 	)
 }
